@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgb(255, 0, 0), lightgreen);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        button{
+            background-color: red;
+            color: white;
+            height: 9vh;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: red;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>ANTES E DEPOIS</strong></h1>
+    <button onclick="sucessor()">Antecessor e sucessor</button>
+    <script>
+        function sucessor(){
+            let num = parseInt(window.prompt('Digite um número inteiro qualquer: '));
+            let antecessor = (num -1)
+            let sucesso = (num + 1)
+            let resolucao = window.alert(`Antes de ${num} temos o número ${antecessor}\nDepois de ${num}, temos o número ${sucesso}`)
+        }
+    </script>
+</body>
+</html>

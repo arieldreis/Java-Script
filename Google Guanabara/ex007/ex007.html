@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <link rel="shortcut icon" href="images.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: seagreen;
+        }
+        #res {
+            color:white;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input{
+            width: 120px;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        #alinha{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <form id="alinha">
+        <input type="number" name="txtn1" id="txtn1"> + <!--O name e o Id tem uma funcionalidade na linguagem de PHP.-->
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+    </form>
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            let tn1 = window.document.getElementById('txtn1')
+            let tn2 = window.document.querySelector('input#txtn2')
+            let n1 = parseInt(tn1.value)
+            let n2 = parseInt(tn2.value)
+            let s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+    </script>
+</body>
+</html>

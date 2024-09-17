@@ -1,0 +1,9 @@
+<script>
+    var numero = window.prompt('Escreva um número qualquer, por favor: ')
+    //num%2 resulta o resto da divisão de numero por 2 
+    if(numero%2!=0){
+        document.write('<h1>O número digitado é impar</h1>');
+    }else{
+        document.write('<h1>O número digitado é impar</h1>');
+    }
+</script>

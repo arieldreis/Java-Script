@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora com janelas</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h2>Esse programa é um calculadora usando janelas.</h2>
+    <script>
+        var nome = String(window.prompt('O seu nome é: '));
+        var soma_1 = parseInt(window.prompt('Digite um número: '));
+        var soma_2 = parseInt(window.prompt('Digite outro número, por favor: '));
+        var resultado = soma_1 * soma_2;
+        document.write(`<h1>O seu nome é ${nome} tem ${nome.length}letras e a multiplicação entre ${soma_1} e ${soma_2} é igual ${resultado} </h1>`);
+    </script>
+</body>
+</html>

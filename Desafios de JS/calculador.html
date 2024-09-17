@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            background-color: rgb(44, 38, 38);
+            margin-left: auto;
+            margin-right: auto;
+            width: 225px;
+        }
+        input{
+            width: 220px;
+            height: 10vh;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            border-radius: 4px;
+            border: 1px  black solid ;
+        }
+        button{
+            height: 10vh;
+            width: 50px;
+            background-color: rgb(240, 148, 9);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .alinha{
+            display: flex;
+            color: gray;
+        }
+        .alinha2 {
+            display: flex;
+        }
+        .alinha3{
+            display: flex;
+        }
+        #ajuste{
+            height: 0 20vh;
+            display: inline-block;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite um número nesse Calculadora</h1>
+    <div id="res">O resultado é </div>
+    <form onsubmit="return false;">
+        <input type="text" id="meuinput" name="meuinput" placeholder="DIGITE..." style="color: #ffffff;"><br>
+        <div class="alinha2">
+            <button onclick="multiplicacao()" style="color: #ffffff;">X</button>
+            <div class="alinha">
+                <button onclick="sete(7)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" id="x1"><strong>7</strong></button>
+                <button onclick="oito(8)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" id="x2"><strong>8</strong></button>
+                <button onclick="nove(9)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" id="x3"><strong>9</strong></button>
+                <button id="ajuste" style="color: white; background-color:orangered;"><strong>=</strong></button>
+            </div>
+        </div>
+        <div class="alinha3">
+            <button onclick="adicao()" style="color: #ffffff;">+</button><br>
+                <button onclick="quatro(4)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong>4</strong></button>
+                <button onclick="cinco(5)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong>5</strong></button>
+                <button onclick="seis(6)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong>6</strong></button><br>
+        </div>
+        <div class="alinha2">
+            <button onclick="diferenca()" style="color: #ffffff;">-</button><br>
+                <button  onclick="um(1)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;">1</button>
+                <button onclick="dois(2)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;">2</button>
+                <button onclick="tres(3)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;">3</button>
+        </div>
+        <div class="alinha2">
+            <button onclick="divisao()" style="color: #ffffff;">÷</button><br>
+                <button onclick="zero(0)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong>0</strong></button>
+                <button  onclick="virgula()" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong><strong>,</strong></button>
+                <button onclick="" style="color: #ffffff; background-color: red;"><strong>C</strong></button><br>
+        </div>
+    </form>
+    <script>
+        function zero(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function um(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function dois(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function tres(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function quatro(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function cinco(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function seis(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function sete(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function oito(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function nove(numero){
+            let input = document.getElementById('meuinput');
+            meuinput.value = numero;
+        }
+        function 
+    </script>
+</body>
+</html>

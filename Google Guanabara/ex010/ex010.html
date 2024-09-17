@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        h1{
+            color: white;
+        }
+        label{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    <label for="nada">Velocidade do carro</label><br>
+    <input type="number" name="tn1" id="tn1" placeholder="Digite...">
+    <input type="button" value="Enviar" onclick="calcular()">
+    <div id="res">
+        <p></p>
+    </div>
+    <script>
+        function calcular(){
+            let t2 = window.document.querySelector('input#tn1');
+            let res = window.document.querySelector('div#res')
+            let vel = Number(tn1)
+            res.innerHTML = `Sua velocidade atual é de ${vel}`
+        }
+    </script>
+</body>
+</html>

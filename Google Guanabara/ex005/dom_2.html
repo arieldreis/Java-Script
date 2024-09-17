@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Parte 2</title>
+    <style>
+        #area {
+            background-color: greenyellow;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            align-items: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <!--onclick="clicar ()" onmouseout="entrar()" onmouseout="sair()--> <!--Esse conteúdo é colocado na div do html-->
+    <div id="area">
+        <p>intereja...</p>
+    </div>
+    <script>
+        let area = window.document.getElementById('area')
+        area.addEventListener('click' , clicar)
+        area.addEventListener('mouseenter' , entrar)
+        area.addEventListener('mouseout' , sair)
+        function clicar(){
+           area.innerText = 'clicou'
+           area.style.background = 'gray'
+        }
+        function entrar () {
+            area.innerText = 'Entrou!'
+        }
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = 'yellow'
+        }
+    </script>
+</body>
+</html>

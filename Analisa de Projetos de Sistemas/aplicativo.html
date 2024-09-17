@@ -1,0 +1,20 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aplicativo</title>
+</head>
+<body>
+    <script>
+        var acesso_permitido = window.prompt('Digite a sua idade, para acessar o aplicativo: ');
+        if(isNaN(acesso_permitido)){
+            window.alert('O número digitado não e numérico, digite novamente.');
+            window.location.reload(acesso_permitido);
+        }else if(acesso_permitido >= 18){
+                document.write('<h1>O seu acesso foi permitido, desfrute de nosso aplicativo</h1>');
+       }else{
+            document.write('<h1>O seu acesso foi negado, complete 18 anos para desfrutar de nosso aplicativo</h1>');
+       }
+    </script>  
+</body>
+</html>

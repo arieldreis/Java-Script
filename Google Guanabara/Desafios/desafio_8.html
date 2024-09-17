@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Matemasie&display=swap');
+        body{
+            background-image: linear-gradient(to right, green, lightgreen);
+            font-family: 'Matemasie', Helvetica, sans-serif;
+        }
+        button{
+            background-color: red;
+            color: #ffffff;
+            font-size: 2em;
+        }
+        button:hover{
+            background-color: rgb(235, 235, 23);
+            transition: background-color 2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular o Desconto</h1>
+    <button onclick="desconto()">Desconto 10%</button>
+    <p>Clique no botão acima!</p>
+    <div id="local">
+        <p></p>
+    </div>
+    <script>
+        function desconto(){
+            let nome = String(window.prompt('Qual é o nome do produto que você está comprando? '))
+            let preco = parseFloat(window.prompt(`Qual é o preço do ${nome} que você está comprando? `))
+            let desconto = (preco*0.1) 
+            let preco_des = preco -(preco*0.1) 
+            local.innerHTML = <h2>Calculando desconto de 10% no ${nome}</h2>\n O preço original era de R$${preco.toFixed(2)}\n Você acaba de ganhar R$${desconto.toFixed(2)} de desconto\n No final o seu produto ficará R$${preco_des.toFixed(2)} no produto ${nome}
+        }
+    </script>
+</body>
+</html>

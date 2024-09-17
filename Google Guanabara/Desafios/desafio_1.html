@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem</title>
+    <style>
+        body{
+            background-image: linear-gradient(to left, blue, lightblue);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            background-color: aqua;
+            color: #ffffff;
+            width: 60px;
+            height: 20vh;
+            cursor: pointer; /* Muda o cursor para o estilo de "mão" indicando um link ou botão clicável */
+        }
+        button:hover{
+            background-color: aqua;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio de Mensagens</h1>
+    <button onclick="calcular()">1</button>
+    <button onclick="retro()">2</button>
+    <button onclick="retroceder()">3</button>
+    <script>
+        function calcular(){
+            window.alert('Você apertou o 1º botão')
+        }
+        function retro(){
+            window.alert('Você apertou o 2º botão')
+        }
+        function retroceder(){
+            window.alert('Você apertou o 3º botão')
+        }
+    </script>
+</body>
+</html>

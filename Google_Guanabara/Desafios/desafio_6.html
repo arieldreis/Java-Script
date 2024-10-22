@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPERATURA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        body{
+            align-items: center;
+            background-image: linear-gradient(to right, lightgreen, white );
+            font-family:'Protest Guerrilla', Helvetica, sans-serif;
+            background-repeat: repeat-y;
+        }
+        h1{
+            color: black;
+            text-align: left;
+            text-shadow: 1px 2px;
+        }
+        button{
+            cursor: pointer;
+            background-color: darkslategray;
+            padding: 20px;
+            border: none;
+            border-radius:5px;
+            box-shadow: 2px 2px 2px 2px black;
+            font-family: 'Protest Guerrilla', Helvetica, sans-serif;
+            color: #ffffff;
+            transition: 2s;
+        }
+        button:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>CONVERSOR DE TEMPERATURA</h1>
+    <button onclick="converter()">CONVERTER</button>
+    <div id="mudanca_elemento">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    <script>
+        function converter(){
+            let solicitacao = parseFloat(window.prompt('Digite um temperatura em ºC(Celcius)'))
+            let fahrenhati = (solicitacao * 9/5) + 32
+            let  kelvin = solicitacao + 273.15
+            document.getElementById("mudanca_elemento").innerHTML = `<h2 style="font-family:Arial; text-shadow:none;">A TEMPERATURA DE ${solicitacao}, corresponde a...\n ${fahrenhati}ºF\n ${kelvin}ºK</h2>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: black;
+        }
+        button{
+            padding: 20px;
+            border-radius: 5px 0px 5px 5px;
+            border: none;
+            margin-bottom: 20px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button ondblclick="converter_medidas()">CONVERTER</button>
+    <div id="mudanca">Clique no botão acima para iniciar!</div>
+    <script>
+        function converter_medidas(){
+            let solicitacao = parseFloat(window.prompt('Digite uma distância em metros: '));
+            let mudanca = document.getElementById('mudanca');
+            const kilometro = solicitacao / 1000
+            const hectometro = solicitacao / 100
+            const decametro = solicitacao / 10
+            const decimetro = solicitacao * 10
+            const centimetro = solicitacao * 100
+            const milimetro = solicitacao * 1000
+            mudanca.innerHTML = `<h2>A distância de ${solicitacao} metros, corresponde a...</h2><br>` +
+            `<p>${kilometro} quilômetros (Km)</p>` +
+            `<p>${hectometro} hectômetro (Hm)</p>` +
+            `<p>${decametro} decâmetros (Dam)</p>` +
+            `<p>${decimetro} decímetros (Dm)</p>` +
+            `<p>${centimetro} centímetro (Cm)</p>` +
+            `<p>${milimetro} milímetro (mm)</p>`
+        }
+    </script>
+</body>
+</html>

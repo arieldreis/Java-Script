@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ano Bissexto</title>
+    <title>Média do Aluno</title>
     <style>
-        
+        body{
+            background-color: black;
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1, p{
+            color: #ffffff;
+            box-shadow: 1px 1px 1px 0px solid black;
+        }
+        #calculo{
+            color: white;
+        }
+        button{
+            padding: 20px;
+            background-color: red;
+            color: #ffffff;
+            cursor:pointer;
+            border:none;
+            border-radius:4px 0px 4px 4px;
+            margin-bottom: 30px;
+        }
+        button:hover{
+            background: #ff000085;
+        }
     </style>
 </head>
 <body>
-    <h1>Ano Bissexto</h1>
+    <h1>Situação do Aluno</h1>
+    <button onclick="media_final()">Entrar com as Notas</button>
+    <div id="demo">
+        <p>Clique no botão acima para informar as notas do aluno!</p>
+    </div>
+    <script>
+        function media_final(){
+            let demo = document.getElementById('demo');
+            const name = String('Qual é o nome do aluno?');
+            const nota_1 = parseFloat(window.prompt(`Primeira nota de ${name}:`));
+            const nota2 = parseFloat(window.prompt(`Segunda nota de ${name}:`));
+            const media_final = (nota_1 + nota2) / 2
+        }
+        if(media_final > 6){
+            demo
+        }
+    </script>
 </body>
 </html>

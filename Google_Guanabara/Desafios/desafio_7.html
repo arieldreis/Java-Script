@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -45,3 +46,52 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 20px;
+        }
+        button{
+            background-color: red;
+            border: none;
+            border-radius: 5px 0px 5px 5px;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            transition: 2s;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ ➙ US$</h1>
+    <button ondblclick="conversor()">CONVERTER</button>
+    <p id="demo">Clique no botão acima para iniciar!</p>
+    <script>
+        function conversor(){
+            let demo = document.getElementById('demo');
+            let dolar = parseFloat(window.prompt('Antes de mais nada. Qual é o valor da cotação agora?'));
+            let reais = parseFloat(window.prompt('Quantos R$ tem na sua carteira?'));
+            let conversao_reais = reais / dolar
+            demo.innerHTML = `<h1>Analisando os valores...</h1>` +
+            `<p>Você tem R$${reais} na sua carteira</p>` +
+            `<p>E se converter os valores você tem US$${conversao_reais.toFixed(2)} em sua carteira.</p>`
+        }
+    </script>
+</body>
+</html>
+>>>>>>> 4f3476556d1c3da467c248868b2bb186d2e4092f

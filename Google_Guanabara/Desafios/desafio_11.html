@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        button{
+            padding: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px 0px 5px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: rgba(255, 0, 0, 0.712);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="verificar()">VERIFICAR</button>
+    <div id="demo">
+        <p>Informe um ano para saber se ele é bissexto</p>
+    </div>
+    <script>
+        function verificar(){
+            let demo = document.getElementById('demo');
+            let bissexto = parseInt(window.prompt('Qual é o ano que você quer verificar?'));
+            if(bissexto%4!=0){
+                demo.innerHTML = `O ano de ${bissexto} <mark style="background-color:red;color:white;">NÃO É BISSEXTO</mark>`
+            }
+            else{
+                demo.innerHTML = `O ano de ${bissexto} <mark style="background-color:green; color:darkgreen;">É BISSEXTO</mark>`
+            }
+            demo.style.lineHeight = '2.0'
+        }
+    </script>
+</body>
+</html>

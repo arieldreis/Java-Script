@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desconto</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Matemasie&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
         body{
-            background-image: linear-gradient(to right, green, lightgreen);
-            font-family: 'Matemasie', Helvetica, sans-serif;
+            /* background-image: linear-gradient(to right, green, lightgreen); */
+            font-family: 'Passion One', Arial, sans-serif;
+            background: black;
+            color: #ffffff;
         }
         button{
             background-color: red;
             color: #ffffff;
-            font-size: 2em;
+            font-size: 1.3em;
+            font-family: 'Passion One', Helvetica, sans-serif;
+            border: none;
+            border-radius: 5px 0px 5px 5px;
+            padding: 10px;
+            cursor: pointer;
+            transition: 2s;
         }
         button:hover{
-            background-color: rgb(235, 235, 23);
-            transition: background-color 2s;
+            background-color: rgba(255, 0, 0, 0.726);
         }
     </style>
 </head>
@@ -30,11 +37,15 @@
     </div>
     <script>
         function desconto(){
+            let local = document.getElementById('local');
             let nome = String(window.prompt('Qual é o nome do produto que você está comprando? '))
             let preco = parseFloat(window.prompt(`Qual é o preço do ${nome} que você está comprando? `))
             let desconto = (preco*0.1) 
             let preco_des = preco -(preco*0.1) 
-            local.innerHTML = <h2>Calculando desconto de 10% no ${nome}</h2>\n O preço original era de R$${preco.toFixed(2)}\n Você acaba de ganhar R$${desconto.toFixed(2)} de desconto\n No final o seu produto ficará R$${preco_des.toFixed(2)} no produto ${nome}
+            local.innerHTML = `<h2>Calculando desconto de 10% no ${nome}</h2>` +
+            `O preço original era de R$${preco.toFixed(2)}` +
+            ` Você acaba de ganhar R$${desconto.toFixed(2)} de desconto` +
+            ` No final o seu produto ficará R$${preco_des.toFixed(2)} no produto ${nome}`
         }
     </script>
 </body>

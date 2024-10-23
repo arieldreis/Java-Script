@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salarial</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        button{
+            padding: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px 0px 5px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(255, 0, 0, 0.712);
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <button type="button" onclick="reajuste()">Reajuste Salarial</button>
+    <div id="mudanca">
+        <p>Clique no botão acima para iniciar!</p>
+    </div>
+    <script>
+        function reajuste(){
+            let name_employee = String(window.prompt('Qual é o nome do funcionário?'))
+            let salario = parseFloat(window.prompt(`Qual é o salário de ${name_employee}?`))
+            let reajuste = parseFloat(window.prompt(`O salário de ${name_employee} vai ser ajustado em qual porcentagem?`))
+            let quantidade_aumento = salario * (reajuste / 100)
+            let salario_bruto = salario + quantidade_aumento
+            let mudanca = document.getElementById('mudanca');
+            mudanca.innerHTML = `<h2>${name_employee} recebeu um aumento salarial!</h2>` +
+            `O salário era de R$${salario}.<br>` +
+            `Com o aumento de ${reajuste}%, o salário vai aumentar R$${quantidade_aumento} no proxímo mês<br>` +
+            `E a partir daí, ${name_employee} vai passar a ganhar R$${salario_bruto}.<br>`
+            mudanca.style.lineHeight = '2.5'
+        }
+    </script>
+</body>
+</html>

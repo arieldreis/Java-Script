@@ -7,6 +7,7 @@ h1{
     color: white;
     text-align: center;
     margin-bottom: 80px;
+    text-shadow: 1px 2px black;
 }
 input{
     border-radius: 10px 0px 10px 10px;
@@ -27,7 +28,7 @@ section{
     margin: auto;
     background-color: #ffffff;
     border-radius: 10px 0px 10px 10px;
-    width: 500px;
+    width: 50%;
     margin-bottom: 30px;
     padding: 20px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.671);
@@ -40,7 +41,7 @@ p{
     text-align: left;
 }
 button{
-    background-color: rgb(87, 205, 252);
+    background-color: blue;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
@@ -52,6 +53,6 @@ button{
     transition: 2s;
 }
 button:hover{
-    background-color: aquamarine;
+    background-color: #57cdfc81;
 }
 

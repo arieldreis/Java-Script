@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPERATURA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+        body{
+            background: black;
+            font-family:'Protest Guerrilla', Helvetica, sans-serif;
+            color: #ffffff;
+        }
+        h1{
+            color: white;
+            text-align: left;
+        }
+        button{
+            cursor: pointer;
+            background-color: red;
+            padding: 20px;
+            border: none;
+            border-radius:5px;
+            box-shadow: 2px 2px 2px 2px black;
+            font-family: 'Protest Guerrilla', Helvetica, sans-serif;
+            color: #ffffff;
+            transition: 2s;
+        }
+        button:hover{
+            background-color: rgba(255, 0, 0, 0.699);
+        }
+    </style>
+</head>
+<body>
+    <h1>CONVERSOR DE TEMPERATURA</h1>
+    <button onclick="converter()">CONVERTER</button>
+    <div id="mudanca_elemento">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    <script src="arquivojs_separado/desafios_6.js"></script>
+</body>
+</html>

@@ -43,12 +43,13 @@
     <div id="res">Resultado</div>
     <script>
         function somar() {
-            let tn1 = window.document.getElementById('txtn1')
-            let tn2 = window.document.querySelector('input#txtn2')
-            let n1 = parseInt(tn1.value)
-            let n2 = parseInt(tn2.value)
-            let s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+            let tn1 = parseFloat(window.document.getElementById('txtn1').value)
+            let tn2 = parseFloat(window.document.querySelector('input#txtn2').value)
+            let s = tn1 + tn1
+            res.innerHTML = `A soma entre ${tn1} e ${tn2} é igual a ${s}`
+            if(tn1 && tn2 < 0){
+                window.alert('Valores Invalidos, digite novamente');
+            }
         }
     </script>
 </body>

@@ -12,23 +12,15 @@
     </header>
     <main>
         <section>
-            <form>
+            <form onsubmit="tabuada(event)">
                 <label for="numeber">NÚMERO:</label>
                 <input type="number" name="numero" id="numero_mensagem"><br>
-                <button onclick="tabuada()" type="submit">TABUADA</button>
+                <button type="submit" ondblclick="tabuada(event)">TABUADA</button>
             </form>
-            <select aria-placeholder="Digite..." size="10" id="resolucao">
-                <!-- <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option> -->
+           <div id="resolucao">
+            <select id="select" size="10">
             </select>
+           </div>
         </section>
     </main>
     <footer>&copy;CursoemVídeo</footer>

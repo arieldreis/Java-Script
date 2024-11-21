@@ -44,6 +44,7 @@
         input[type="number"]:focus {
             outline: none;
             box-shadow: 0 0 5px #87cefa;
+            outline: none;
         }
 
         button {
@@ -52,7 +53,7 @@
             color: white;
             padding: 10px 20px;
             font-size: 16px;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             width: 100%;
             transition: 2s;
@@ -70,7 +71,7 @@
 </head>
 <body>
     <div class="form-container" onsubmit="adivinhar(event)">
-        <h1>DIGITE UM NÚMERO</h1>
+        <h1>DIGITE UM NÚMERO ENTRE 1 Á 100</h1>
         <form action="#">
             <input type="number" placeholder="Digite aqui" id="jogador" required>
             <button type="submit" onclick="adivinhar()">Confirmar</button>
@@ -91,6 +92,8 @@
             if(Number(jogador) === computador){
                 demo.innerHTML = `<p>Você digitou o número ${jogador} e a computador jogou o número ${computador}</p><br>` +
                 `Você ganhou meus parabéns!🎉🎉🏆🏆`
+            }else if(jogador < 0 || jogador > 100){
+                window.alert('Dados Inválidos!');
             }else{
                 demo.innerHTML =`<p>Você digitou o número ${jogador} e a computador jogou o número ${computador}</p><br>` +
                 `Você perdeu, tente jogar outra vez te desejo uma boa sorte!😔😔😔😔`

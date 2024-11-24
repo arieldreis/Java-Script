@@ -4,74 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digite um Número</title>
-    <style>
-        /* Estilo global */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e90ff, #87cefa);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #fff;
-        }
-
-        /* Caixa do formulário */
-        .form-container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            width: 50%;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        input[type="number"]:focus {
-            outline: none;
-            box-shadow: 0 0 5px #87cefa;
-            outline: none;
-        }
-
-        button {
-            background: #ff4500;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            width: 100%;
-            transition: 2s;
-            box-shadow: 4px 5px 4px 5px rgba(0, 0, 0, 0.718);
-        }
-
-        button:hover {
-            background: #ff6347;
-            transform: scale(1.1);
-        }
-        #demo{
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="form-container" onsubmit="adivinhar(event)">
-        <h1>DIGITE UM NÚMERO ENTRE 1 Á 100</h1>
+        <h1>DIGITE UM NÚMERO ENTRE 0 Á 100</h1>
         <form action="#">
             <input type="number" placeholder="Digite aqui" id="jogador" required>
             <button type="submit" onclick="adivinhar()">Confirmar</button>
@@ -80,25 +17,6 @@
             <p>Clique no botão acima!</p>
         </div>
     </div>
-    <script>
-        function adivinhar(){
-            const jogador = document.getElementById('jogador').value;
-            const demo = document.getElementById('demo');
-            const computador = Math.floor(Math.random()*100) + 1;
-            if(jogador.length === 0){
-                window.alert('Digite uma valor válido no campo!')
-                return;
-            }
-            if(Number(jogador) === computador){
-                demo.innerHTML = `<p>Você digitou o número ${jogador} e a computador jogou o número ${computador}</p><br>` +
-                `Você ganhou meus parabéns!🎉🎉🏆🏆`
-            }else if(jogador < 0 || jogador > 100){
-                window.alert('Dados Inválidos!');
-            }else{
-                demo.innerHTML =`<p>Você digitou o número ${jogador} e a computador jogou o número ${computador}</p><br>` +
-                `Você perdeu, tente jogar outra vez te desejo uma boa sorte!😔😔😔😔`
-            }
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

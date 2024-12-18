@@ -9,14 +9,17 @@ function tabuada(event){
         window.alert('O número digitado não é numérico!');
     }else{
         let x = Number(tabuada.value);
-        resolucao.innerHTML = ''
-        for(let contador = 1;contador <= 10; contador+=1){
-            let item = document.createElement('option')
+        let contador = 1;
+        resolucao.innerHTML = '';
+        while(contador <= 10){
+            //let item = document.createElement('option')
             let mult = x * contador
             resolucao.innerHTML += `${x} x ${contador} = ${mult}<br>`;
-            select.appendChild(item);
+            contador+=1
         }
     }
+
     resolucao.style.fontFamily = 'Arial';
     resolucao.style.margin = '20px'
+    tabuada.value="";
 }     

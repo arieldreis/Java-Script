@@ -3,7 +3,7 @@ function adivinhar(){
     const demo = document.getElementById('demo');
     const computador = Math.floor(Math.random()*100) + 1;
     const numerodigitado = parseInt(jogador.value);
-    if(numerodigitado.length === 0 || !NaN(numerodigitado)){
+    if(numerodigitado.length === 0){
         window.alert('Digite uma valor válido no campo!')
         return;
     }

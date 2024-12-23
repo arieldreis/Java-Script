@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variavéis Compostas</title>
+    <style>
+        body{
+            background-image: linear-gradient(to top , green, lightgreen);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variavéis Compostas</h1>
+    <script>
+        const pessoas = ["CAROLINE" , "ARIEL" , "ANDRÉA", "JUVENILDES"];
+        const numero = [4 , 5, 6, 7, 8]
+        window.alert(`O valor equivalente a essa array é ${pessoas[1]}`);
+        const objeto = {nome:"Ariel" , sobrenome:"Marinho", idade:16};
+        window.alert(`O valor desse objeto coresponde a ${objeto.idade}`);
+        //window.alert(pessoas.push("Matheus"));
+        window.alert(`A quantidade de elementos nessa array é de ${pessoas.length}`);
+        console.log(pessoas.push("Matheus"));
+        console.log(pessoas.sort());
+        console.log(`A soma dos valores é igual ${numero[1] + numero[3]}`);
+        for(let cont = 0 ; cont <= numero.length ; cont++){
+            console.log(numero[cont]);
+        }
+        for(let pos in numero){
+            console.log(numero[pos]);
+        }
+       let pos = numero.indexOf(5);
+       if(pos == -1){
+        console.log("O valor não foi encontrado.");
+       }else{
+        console.log(`O valor 5 está na posição ${pos}`);
+       }
+    </script>
+</body>
+</html>

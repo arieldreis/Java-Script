@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando IndexOf</title>
+    <style>
+        body{
+            background-image: linear-gradient(to top , green, lightgreen);
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        mark{
+            padding: 10px;
+            border-radius: 5px;
+        }
+        ul{
+            list-style-type: square;
+        }
+        form{
+            background-color: white;
+            padding: 50px;
+            color: black;
+            border-radius: 10px;
+        }
+        input[type="text"]{
+            margin-bottom: 20px;
+            padding: 15px;
+            width: 90%;
+        }
+        button{
+            padding: 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            border-radius: 5px;
+            transition: 2s ease;
+        }
+        button:hover{
+            background-color: aqua;
+            transform: scale(1.2);
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual é a função do <mark>INDEXOF</mark> no JavaScript</h1>
+   <ul type="I">
+        <li>A função indexOf no JavaScript é usada para localizar <strong>a posição de um elemento</strong> em uma string ou<br>array. Ela retorna o índice (posição) da primeira ocorrência do elemento especificado. Se o<br>elemento não for encontrado, ela retorna -1.</li>
+   </ul>
+   <form>
+        <label for="string"><strong>TEXTO:</strong></label><br>
+        <input type="text" name="string" id="idstring"><br>
+        <label for="subString"><strong>TERMOS A SER ENCONTRADOS:</strong></label><br>
+        <input type="text" name="sub" id="subString">
+        <button type="submit" onclick="localizarString()">VERIFICAR</button>
+        <div id="resultado"></div>
+   </form>
+   <script src="exemplo.js"></script>
+</body>
+</html>

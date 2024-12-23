@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções em JavaScript</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom, green, darkgreen);
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+        }
+        input[type="number"]{
+            padding: 10px;
+        }
+        button{
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa Par ou Impar</h1>
+    <p>Digite um número positivo para ser feita a execução</p>
+    <form>
+        <input type="number"  id="idnumero"><br>
+    </form>
+    <button type="submit" onclick="parimp()"><strong><em>CLIQUE!</em></strong></button>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <script>
+        function parimp() {
+            const numero = document.getElementById('idnumero');
+            const parimpar = parseInt(numero.value);
+            const mensagem = document.getElementById('demo');
+            if(parimpar % 2 == 0){
+                mensagem.innerHTML = `<p>O número ${parimpar} é par.</p>`;
+            }else{
+                mensagem.innerHTML = `<p>O número ${parimpar} é impar</p>`
+            }
+            numero.value = "";
+            mensagem.style.color = "white";
+            mensagem.style.fontFamily = "Arial";
+        }
+    </script>
+</body>
+</html>

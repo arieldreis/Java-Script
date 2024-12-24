@@ -2,19 +2,18 @@ function tabuada(event){
     event.preventDefault();
     let tabuada = document.getElementById('numero_mensagem');
     let resolucao = document.getElementById('resolucao');
-    let select = document.getElementById('select');
+    let lista = document.getElementById('idselect');
+    let x = Number(tabuada.value);
     if(tabuada.value.length == 0){
         window.alert('Campo vazio, digite um número para o seu funcionamento.');
-    }else if(isNaN(tabuada.value)){
-        window.alert('O número digitado não é numérico!');
     }else{
-        let x = Number(tabuada.value);
         let contador = 1;
-        resolucao.innerHTML = '';
+        lista.innerHTML = "";
         while(contador <= 10){
-            //let item = document.createElement('option')
+            let item = document.createElement('option');
+            lista.appendChild(item);
             let mult = x * contador
-            resolucao.innerHTML += `${x} x ${contador} = ${mult}<br>`;
+            item.text = `${x} x ${contador} = ${mult}`;
             contador+=1
         }
     }
@@ -22,4 +21,5 @@ function tabuada(event){
     resolucao.style.fontFamily = 'Arial';
     resolucao.style.margin = '20px'
     tabuada.value="";
+    tabuada.focus();
 }     

@@ -15,7 +15,6 @@ function tabuada(event){
             let mult = x * contador
             item.text = `${x} x ${contador} = ${mult}`;
             contador+=1
-            item.style.padding = "5px";
         }
     }
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Jogos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e90ff, #ff6347);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .game-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .game-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        .game-links a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Plataforma de Jogos!</h1>
+        <div class="game-links">
+            <a href="par_ou_impar.html">Par ou Ímpar</a>
+            <a href="pedra_papel_tesoura.html">Pedra, Papel ou Tesoura</a>
+            <a href="adivinhar_numero.html">Adivinhe o Número</a>
+        </div>
+    </div>
+</body>
+</html>

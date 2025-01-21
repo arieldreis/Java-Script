@@ -76,7 +76,7 @@
                         let logradouro = response.logradouro ? response.logradouro: "Não Informado";
                         let cidade = response.localidade;
                         let estado = response.uf;
-                        texto.innerHTML = <p>Logradouro: ${logradouro}, Cidade: ${cidade}, estado: ${estado}</p>;
+                        texto.innerHTML = `<p>Logradouro: ${logradouro}, Cidade: ${cidade}, estado: ${estado}</p>`;
                     }
                 }catch(error){
                     texto.innerHTML = "<p>ERRO AO PROCESSAR A REQUISIÇÃO. TENTE NOVAMENTE MAIS TARDE.</p>";

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        main{
+            padding: 20px;
+            height: 400px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #message {
+            max-width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .received {
+            background-color: #f1f1f1;
+            align-self: flex-start;
+        }
+
+        .sent {
+            background-color: #4CAF50;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .footer {
+            display: flex;
+            padding: 10px;
+            background-color: #f1f1f1;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .input-message {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .send-button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="header">
+            <h1>Chat ao Vivo</h1>
+        </header>
+        <main class="chat-box">
+            <section class="message received" style="display: none;" id="resultado"></section>
+            <section class="message_sent"></section>
+        </main>
+        <footer class="footer">
+            <input type="text" placeholder="Digite sua mensagem..." class="input-message">
+            <button class="send-button" onclick="conversar(event)">Enviar</button>
+        </footer>
+    </div>
+    <script>
+        let nome = window.prompt("QUAL É O SEU NOME:");
+        function conversar(){
+            event.preventDefault();
+            const messaged_received = document.querySelector('.input-message');
+            const resultado = document.getElementById('resultado');
+            const jogador = messaged_received.value;
+            if(jogador === ""){
+                window.alert("DIGITE UMA MENSAGEM!");
+            }else{
+                const novaMensagem = document.createElement('div');
+                novaMensagem.classList.add('jogador')
+                novaMensagem.textContent = `${nome}: ${jogador}`
+                resultado.appendChild(novaMensagem)
+                
+            }
+            messaged_received.value = ""
+            resultado.style.display = "block";
+            resultado.style.padding = "10px"
+            resultado.style.borderRadius = "10px"
+        }
+    </script>
+</body>
+</html>

@@ -5,170 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="shortcut icon" href="png-transparent-calculator-computer-icons-calculator-electronics-desktop-wallpaper-calculator-thumbnail.ico" type="image/x-icon">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Jersey+15&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap');
-        body{
-            background-color:azure;
-            font-family: "Jersey 15", Helvetica, sans-serif;
-        }
-        form{
-            background-color: rgb(44, 38, 38);
-            margin-left: auto;
-            margin-right: auto;
-            width: 15%;
-            box-shadow: 2px 2px 2px 2px black;
-            margin-top: 80px;
-        }
-        input{
-            width: 95%;
-            height: 10vh;
-            text-align: center;
-            font-family: "Jersey 15", Helvetica, sans-serif;
-            background-color: black;
-            border-radius: 4px;
-            border: 1px  black solid ;
-            font-size: 20px;
-        }
-        button{
-            height: 10vh;
-            width: 50px;
-            background-color:orange;
-            opacity: 1.4;
-            cursor: pointer;
-            font-family: "Jersey 15", Helvetica, sans-serif;
-        }
-        .alinha{
-            display: flex;
-            color: gray;
-        }
-        .alinha2 {
-            display: flex;
-        }
-        .alinha3{
-            display: flex;
-        }
-        #ajuste{
-            height: 0 20vh;
-            display: inline-block;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div id="res">O resultado é </div> -->
     <form>
-        <input type="text" class="meuinput" name="meuinput" style="color: #ffffff;"><br>
-        <div class="alinha2">
-            <button onclick="multiplicacao()" style="color: #ffffff; width: 50px; height: 10vh;">X</button>
-            <div class="alinha">
-                <button onclick="sete(7)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>7</strong></button>
-                <button onclick="oito(8)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>8</strong></button>
-                <button onclick="nove(9)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;"><strong>9</strong></button>
-                <button id="ajuste" style="color: white; background-color:orangered;" onclick="calcular()"><strong>=</strong></button>
+        <input type="text" class="meuinput"><br>
+        <div class="container">
+            <button onclick="multiplicacao()" class="operadores">X</button>
+            <div class="container">
+                <button onclick="sete(7)" class="estilo_numero"><strong>7</strong></button>
+                <button onclick="oito(8)" class="estilo_numero"><strong>8</strong></button>
+                <button onclick="nove(9)" class="estilo_numero"><strong>9</strong></button>
+                <button class="calculo_limpa" onclick="calcular()"><strong>=</strong></button>
             </div>
         </div>
-        <div class="alinha3">
-            <button onclick="adicao()" style="color: #ffffff;">+</button><br>
-                <button onclick="quatro(4)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>4</strong></button>
-                <button onclick="cinco(5)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>5</strong></button>
-                <button onclick="seis(6)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>6</strong></button><br>
+        <div class="container">
+            <button onclick="adicao()" class="operadores">+</button>
+            <button onclick="quatro(4)" class="estilo_numero"><strong>4</strong></button>
+            <button onclick="cinco(5)" class="estilo_numero"><strong>5</strong></button>
+            <button onclick="seis(6)" class="estilo_numero"><strong>6</strong></button>
+            <button onclick="abre_conchete()" class="conchete">[</button>
         </div>
-        <div class="alinha2">
-            <button onclick="diferenca()" style="color: #ffffff;">-</button><br>
-                <button  onclick="um(1)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" >1</button>
-                <button onclick="dois(2)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" >2</button>
-                <button onclick="tres(3)" style="width: 60px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" >3</button>
+        <div class="container">
+            <button onclick="diferenca()" class="operadores">-</button>
+            <button  onclick="um(1)" class="estilo_numero">1</button>
+            <button onclick="dois(2)" class="estilo_numero">2</button>
+            <button onclick="tres(3)" class="estilo_numero">3</button>
+            <button onclick="fecha_conchete()" class="conchete">]</button>
         </div>
-        <div class="alinha2">
-            <button onclick="divisao()" style="color: #ffffff;">÷</button><br>
-                <button onclick="zero(0)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong>0</strong></button>
-                <button  onclick="virgula(vir)" style="width: 50px; height: 10vh; background-color: rgb(129, 121, 121); color: #ffffff;" ><strong><strong>,</strong></button>
-                <button onclick="limpar()" style="color: #ffffff; background-color: red;width: 80px;" ><strong>C</strong></button><br>
+        <div class="container">
+            <button onclick="divisao()" class="operadores">÷</button>
+            <button onclick="zero(0)" class="estilo_numero"><strong>0</strong></button>
+            <button  onclick="virgula()" class="estilo_numero"><strong><strong>,</strong></button>
+            <button onclick="limpar()" class="limpa"><strong>C</strong></button>
         </div>
     </form>
-    <script>
-        function zero(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function um(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero
-        }
-        function dois(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function tres(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero
-        }
-        function quatro(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function cinco(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function seis(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function sete(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero
-        }
-        function oito(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function nove(numero){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += numero;
-        }
-        function limpar(){
-
-        }
-        function diferenca(){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += "-";
-        }
-        function adicao(){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += "+"; // Só uma string
-        }
-        function multiplicacao(){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += "x";
-        }
-        function divisao(){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            input.value += "÷"
-        }
-        function calcular(){
-            event.preventDefault();
-            let input = document.querySelector('.meuinput');
-            try{
-                input.value = eval(input.value.replace('x', '*').replace('÷', '/'));
-            } catch {
-                window.alert("ERRO!");
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

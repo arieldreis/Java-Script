@@ -1,0 +1,47 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+.container {
+    margin-top: 50px;
+}
+.timer {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.bomb {
+    font-size: 100px;
+}
+.input-container {
+    margin-top: 20px;
+}
+input {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+.btn {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: darkred;
+}
+mark{
+    padding: 5px;
+    color: white;
+    background-color: rgb(109, 4, 4);
+    border-radius: 5px;
+}

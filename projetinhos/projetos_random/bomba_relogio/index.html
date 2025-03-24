@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarme a Bomba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bomb">💣</div>
+        <div class="timer">60</div>
+        <form>
+            <div class="input-container">
+                <input type="number" id="password" placeholder="Digite a senha..." step="1" maxlength="6" required>
+            </div>
+            <button class="btn" onclick="bomba()" type="button">Desarmar Bomba</button>
+        </form>
+    </div>
+    <div id="resultado"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -74,7 +74,7 @@ function divisao(){
 function virgula(){
     event.preventDefault();
     let input = document.querySelector('.meuinput');
-    input.value += ",";
+    input.value += ".";
 }
 function abre_conchete(){
     event.preventDefault();
@@ -90,13 +90,14 @@ function calcular(){
     event.preventDefault();
     let input = document.querySelector('.meuinput');
     try{
-        input.value = eval(input.value.replace('x', '*').replace('÷', '/').replace(',', '.').replace('[', '(').replace(']', ')'));
+        input.value = eval(input.value.replace('x', '*').replace('÷', '/').replace('[', '(').replace(']', ')'));
     } catch {
         window.alert("ERRO!");
         input.value = "";
     }
 }
 function limpar(){
+    ev
     let input = document.querySelector('.meuinput');
     input.value = "";
 }

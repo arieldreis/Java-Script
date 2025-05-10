@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 12</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>DESAFIO 12: forEach</h1>
+    <script>
+        const cadastros = {cadastros_pessoais:[
+            {
+                nome: "Ana",
+                idade: 25
+            },
+            {
+                nome: "Bruno",
+                idade: 30
+            },
+            {
+                nome: "Carla",
+                idade: 20
+            }
+        ]};
+        cadastros.cadastros_pessoais.forEach((cadastro) =>{
+            console.log(`Nome: ${cadastro.nome} e Idade: ${cadastro.idade}`);
+        })
+    </script>
+</body>
+</html>

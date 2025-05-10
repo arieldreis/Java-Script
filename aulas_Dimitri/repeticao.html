@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Repetição em JS</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            padding: 20px;
+            font-weight: bolder;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="number"]{
+            padding: 15px;
+            border-radius: 4px;
+        }
+        header >  h1{
+            text-align: center;
+        }
+        select{
+            width: 200px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ESTRUTURA DE REPETIÇÃO</h1>
+    </header>
+        <form>
+            <label for="digite">DIGITE UM NÚMERO:</label><br>
+            <input type="number" id="idnumero"><br>
+            <button type="submit" onclick="repetir(event)">CLIQUE!</button>
+            <select id="selects" size="8"></select>
+        </form>
+    <script>
+        function repetir(){
+            event.preventDefault();
+            const idnumero = document.getElementById('idnumero');
+            const analisador = parseInt(idnumero.value);
+            const listinha = document.getElementById('selects');
+            if(isNaN(analisador)){
+                window.alert("O NÚMERO DIGITADO NÃO É NUMÉRICO!⚠️⚠️🚨🚨")
+            }
+            if(analisador < 0){
+                window.alert("O NÚMERO DIGITADO É NEGATIVO, DIGITE UM NÚMERO POSITIVO⚠️⚠️🚨🚨")
+            }else{
+                let contador = 1;
+                listinha.innerHTML = ""
+                while(contador <= analisador){
+                    let item = document.createElement('option')
+                    listinha.appendChild(item)
+                    item.text = `${contador}`
+                    contador+=1
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+    {
+        "nome": "Ariel",
+        "idade": 16,
+        "esta_trabalhando": false,
+        "detalhes_profissao": {
+            "profissao": "Programador",
+            "empresa": "FilmMix"
+        },
+        "hobbies": ["Programar", "Series", "Filmes", "Quadrinhos", "Treinar", "Escrituras", "Musica"]
+    }
+]

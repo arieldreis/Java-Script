@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTUDANDO JSON COM JAVA-SCRIPT</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESTUDANDO JSON COM JAVA-SCRIPT</h1>
+    <script>
+        const filmes = {movies:[
+            {
+                title: "Avengers: Endgame",
+                year: 2019,
+                genre: "action",
+                rating: 8.4
+            },
+            {
+                title: "Ratatouile",
+                year: 2007,
+                genre: "Animation",
+                rating: 8.1
+            },
+            {
+                title: "Iron man",
+                year: 2010,
+                genre: "Action",
+                rating: 7.0
+            }
+        ]};
+        filmes.movies.forEach(movie =>{
+            console.log(movie.title);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em Java-Script</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 150px;
+        }
+        input[type="text"]{
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>USING CONDICIONS IN JAVA-SCRIPT</h1>
+    <form>
+        <label for="nome"><strong>DIGITE SEU NOME:</strong></label>
+        <input type="text" id="idnome" placeholder="DIGITE..."><br>
+        <button type="submit" onclick="input(event)"><strong>CLIQUE!</strong></button>
+        <div id="teste"></div>
+    </form>
+    <script>
+        function input(){
+            event.preventDefault()
+            let name = document.getElementById('idnome');
+            let teste = document.getElementById('teste');
+            let nomeuser = String(name.value)
+            if(nomeuser.length === 0){
+                window.alert("O CAMPO DE PREENCHIMENTO ESTÁ VAZIO");
+                return
+            }
+            if(nomeuser.length > 50){
+                window.alert("O NÚMERO DE CARACTERES MAXIMO É DE 50");
+                return
+            }else{
+                teste.innerHTML = `<p>O SEU NOME É ${nomeuser.toUpperCase()}</p>`
+            }
+            teste.style.color = "white";
+            name.value = "";
+            name.focus()
+        }
+    </script>
+</body>
+</html>

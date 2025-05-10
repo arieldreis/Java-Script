@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJETO</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        button{
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>APREDENDO O MODELO DE OBJETO EM JS</h1>
+    <button>CLIQUE</button>
+    <script>
+        let carro = {marca:"Ford" , 
+        modelo:"Ka", 
+        ano: 2015,
+        placa:"ABC-1234",
+        buzina: function(){window.alert("BIIIIIII")},
+        completo: function(){
+            return `A marca do carro é ${this.marca} e o modelo é ${this.modelo}`
+        }
+        };
+        console.log(carro);
+        window.alert(carro.buzina());
+        console.log(carro.completo());
+    </script>
+</body>
+</html>

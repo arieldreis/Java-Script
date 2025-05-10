@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            color: #555555;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #quote-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #quote {
+            color: #333333;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Motivational Quotes</h1>
+        <p>Click the button below to get an inspiring quote!</p>
+        <button id="get-quote" onclick="citacao()">Get Quote</button>
+        <div id="quote-box">
+            <p id="quote">Your quote will appear here.</p>
+        </div>
+    </div>
+    <script>
+        function citacao(){
+        const ajax = new XMLHttpRequest();
+        ajax.open("GET", "https://api.adviceslip.com/advice");
+        ajax.send();
+        ajax.onload = function(){
+            let quote = document.getElementById('quote');
+            try{
+                let response = JSON.parse(this.responseText);
+                let advice = response.slip.advice;
+                quote.innerHTML = `O CONSELHO DE HOJE "${advice}"`
+            }catch(error){
+                quote.innerHTML = "<p>ERRO AO PROCESSAR A REQUISIÇÃO. TENTE NOVAMENTE MAIS TARDE.</p>";
+            }
+        }
+    }
+    </script>
+</body>
+</html>

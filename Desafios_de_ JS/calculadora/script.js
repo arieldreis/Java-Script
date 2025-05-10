@@ -97,7 +97,7 @@ function calcular(){
     }
 }
 function limpar(){
-    ev
+    event.preventDefault();
     let input = document.querySelector('.meuinput');
     input.value = "";
 }

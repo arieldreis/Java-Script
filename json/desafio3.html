@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 3: INFORMAÇÕES DE PRODUTOS</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>DESAFIO 3: INFORMAÇÕES DE PRODUTOS</h1>
+    <script>
+        const loja = {roupas:[
+            {name: "Camiseta" , price: 29.99},
+            {name: "Calça", price: 89.99},
+            {name: "Tênis", price: 199.99}
+        ]};
+        loja.roupas.forEach(roupa =>{
+            console.log(`Produto: ${roupa.name} - Preço: ${roupa.price}`);
+        });
+    </script>
+</body>
+</html>

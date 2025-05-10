@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de tempo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+        body{
+            background-color: black;
+            color: white;
+            font-family: "Jersey 15", Arial, Helvetica, sans-serif;
+        }
+        h1, h2{
+            text-align: center;
+            font-size: 3em;
+        }
+        button{
+            font-family: "Jersey 15", Arial, Helvetica, sans-serif;
+        }
+        #buttonone{
+            margin-right: 60px;
+            padding: 50px;
+            border-radius: 5px;
+            border:none;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            transition: 2s ease-in-out;
+        }
+        #buttonone:hover{
+            transform: scale(1.1);
+        }
+        #buttontwo{
+            margin-right: 40px;
+            padding: 50px;
+            border-radius: 5px;
+            border:none;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            transition: 2s ease-in-out;
+        }
+        #buttontwo:hover{
+            transform: scale(1.2);
+        }
+        div{
+            justify-content: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>CONTROLE DE TEMPO</h1>
+    <h2 id="tempo">10</h2>
+    <div>
+        <button id="buttonone" onclick="ativarContagem()">ATIVAR CONTAGEM</button>
+        <button id="buttontwo" onclick="pararContagem()">PARAR CONTAGEM</button>
+    </div>
+    <script>
+        /*
+        Os eventos de tempo permitem a execução do código em intervalos de tempo especificados. Esses intervalos de tempo são chamados de eventos de cronometragem.
+
+        Os dois métodos-chaves para usar com Java-Script são:
+
+        setTimeout(function, tempo em milisegundo)
+        -> Executa uma função, depois de esperar um número especificado em milisegundos.
+
+        setInterval(function, miliseconds)
+        -> É o mesmo que o setTimeout(), mas repete a execução da função continuamente.
+        */
+        /*function ativarContagem(){
+            let tempo = document.getElementById('tempo');
+            tempo.innerHTML = "COMEÇOU A CONTAGEM"
+            // Ativa a função apenas 1 vez quando der o tempo especificado
+            setTimeout(function(){
+                tempo.innerHTML = "EXECUTOU O setTimeout!"
+            }, 5000);
+        }
+
+        function pararContagem(){
+            clearTimeout(tempo);
+            let heure =  document.getElementById('tempo');
+            heure.innerHTML = "PAROU A CONTAGEM"
+        }*/
+
+        function ativarContagem(){
+            tempo = setInterval(function (){
+                let cronometro = document.getElementById('tempo').innerHTML;
+                let soma =  parseInt(cronometro) - 1;
+                if(soma === 0){
+                    document.getElementById('tempo').innerHTML = "TEMPO ESGOTADO";
+                    pararContagem();
+                }else{
+                    document.getElementById('tempo').innerHTML = soma;
+                }
+            }, 1000)
+        }
+        function pararContagem(){
+            clearInterval(tempo);
+        }
+    </script>
+</body>
+</html>

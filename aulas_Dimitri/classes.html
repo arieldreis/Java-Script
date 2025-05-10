@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSES EM JAVA-SCRIPT</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CLASSES EM JAVA-SCRIPT</h1>
+    <script>
+        /*CLASSES EM JAVASCRIPT
+
+        Em 2015 foi introduzido no JavaScript as Classes. As classes são um conceito
+        antigo em programação e várias linguagens utilizam elas. Mas no JavaScript isso é
+        relativamente novo, por isso mesmo programadpres experientes não sabem muito bem utilizar.
+
+        Basicamente, as classes são como "fábricas" para criar objetos.
+        Pode se dizer que são "funções especiais" para criação de objetos.
+
+        Assim como uma fábrica de vida real precisa das máquinas para construir os
+        objetos, as Classes no JavaScript usam um método chamado constructor() paraa
+        fabricar os objetos.
+        */
+
+        /*class Carro{
+            constructor(valor1, valor2, valor3){
+                this.marca = valor1;
+                this.modelo = valor2;
+                this.ano = valor3;
+            }
+            buzina(){
+                return this.modelo + " buzinou: BIIIIIIIIIIIII";
+            }
+        }
+
+        const uno = new Carro("Fiat", "Uno", 2001);
+        const gol = new Carro("Volkswagen", "Gol", 2013);*/
+        class Book{
+            constructor(titulo, autor, ano){
+                this.title = titulo;
+                this.author = autor;
+                this.year = ano;
+            }
+            getSummary(){
+                return `Book: ${this.title} , author: ${this.author}, Year: ${this.year}`;
+            }
+        }
+        const mybook = new Book("The book of Mormon", "Joseph Smith", 1830);
+        console.log(mybook.getSummary());
+        class Library{
+           constructor(){
+            this.books = []; //Inicia uma array vazia para armazenar os livros
+           }
+           addbook(book){
+                this.books.push(book); // Adiciona os livros ao array
+            }
+            removeBook(title){
+                this.books = this.books.filter((book) => book.title !== title);
+            }
+            listBooks(){
+                this.books.forEach((book) => {
+                    console.log(book.getSummary());
+                });
+            }
+        }
+        const library = new Library();
+        const book1 = new Book('The Hobbit', 'J.R.R. Tolkien', 1937);
+        const book2 = new Book('1984', 'George Orwell', 1949);
+
+        library.addbook(book1);
+        library.addbook(book2);
+
+        console.log("TODOS OS LIVROS: ");
+        library.listBooks();
+
+        library.removeBook('1984');
+        console.log("APÓS REMOVER UM LIVRO: ")
+        library.listBooks();
+    </script>
+</body>
+</html>

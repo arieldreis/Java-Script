@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIPULAÇÃO DE DATAS</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>MANIPULAÇÃO DE DATAS</h1>
+    <script>
+        //COMANDO BASE PARA PEGAR A DATA
+        let data = new Date();
+        console.log(data)
+
+        //PEGAR O ANO ATUAL COM 4 DIGITOS
+        let ano = data.getFullYear();
+        console.log(ano);
+
+        //PEGAR O MES ATUAL - DE 0 ATÉ 11 SENDO 0 JANEIRO E 11 DEZEMBRO
+        let mes = data.getMonth();
+
+        //MOSTRAR O MES NO FORMATO ESCRITO
+        const mesesano = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+        const mesesEscrito = mesesano[data.getMonth()];
+        console.log(mesesEscrito);
+
+        //PEGAR DIA DO MES
+        let diaMes = data.getDate();
+        console.log(diaMes)
+
+        //PEGAR O DIA DA SEMANA - DE 0 ATÉ 6
+        let diaSemana = data.getDay();
+        console.log(diaSemana);
+
+        const diaDaSemana = ["Domingo" , "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabádo"]
+        let diaSemanaEscrito = diaDaSemana[data.getDay()];
+        console.log(diaSemanaEscrito);
+
+        //PEGAR A HORA - DE 0 ATÉ 23
+        let hora = data.getHours();
+        console.log(`${hora} horas`);
+
+        //PEGAR MINUTO - DE 0 ATÉ 59
+        let minutos = data.getMinutes();
+        console.log(`${minutos} minutos`);
+
+        //PEGAR SEGUNDOS - DE 0 ATÉ 59
+        let segundos = data.getSeconds();
+        console.log(`${segundos} segundos`);
+
+        //PEGAR OS MILISEGUNDOS - DE 0 ATÉ 999
+        let milisegundos = data.getMilliseconds();
+        console.log(`${milisegundos} milisegundos`);
+
+        // PEGAR A DATA NO PADRAO BRASILEIRO - DIA / MES / ANO
+        let dataBR = data.toLocaleString('pt-BR', {dateStyle: 'short'});
+        console.log(`Analisando os valores ${dataBR}`)
+
+        // DIFERENÇA ENTRE DUAS DATAS EM DIAS
+        let dataInicial = new Date();
+        let dataFInal = new Date(2021, 11, 31);
+
+        let diferencaTempo = dataFInal.getTime() - dataInicial.getTime();
+        console.log(`${diferencaTempo} dias`)
+
+        let diferencaDias = Math.ceil(diferencaTempo / (24 * 60 * 60 * 1000))
+        console.log(`${diferencaDias} dias`)
+    </script>
+</body>
+</html>

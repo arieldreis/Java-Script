@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        button{
+            padding: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>APREDENDO ARRAY</h1>
+    <button>CLIQUE</button>
+    <p id="teste"></p>
+    <script>
+        /*const pessoa = ["Ariel","Marinho",15,"Estudante"]
+        pessoa.push("Programador"); //O metodo push adiciona um elemento a uma array
+        pessoa.pop() //Esse metodo retira o ultimo elemento de uma array
+        pessoa.shift() //Esse metodo retira o primeiro elemento de uma array
+        pessoa.unshift("Bonitão")
+        pessoa.splice(1, 0, "", "ITEM ADICIONADO 1", "ITEM ADICIONADO 2") //Essa linha de código adiciona um elemento a sua array, porém vc pode escolher a posição dele.
+        console.log(pessoa);
+        console.log(Array.isArray(pessoa))
+        document.getElementById('teste').innerHTML = pessoa.join(" - ");*/
+
+        const jogadores = ["Ribamar", 
+        "Roger Guedes", 
+        "Roberto Firmino", 
+        "Cristiano Ronaldo", 
+        "Neymar",
+        "Alváro Mota",
+        "Barela",
+        "Rashford"
+        ];
+        const craques = jogadores.slice(3,6) //Esse metodo fatia uma array, e tbm vale lembrar que os números que estão no slice indicam a posiçao dos elementos da array
+        const jog_ordem = jogadores.sort();
+        document.getElementById('teste').innerHTML = `A array fatiada corresponde á ${craques}<br>Para colocar em ordem alfabética ${jog_ordem.join(" - ")}`
+
+        const numeros = [40, 5, 32, 90, 35, 100, 12]
+        numeros.sort(function(a,b){return a - b}); //Ordem crescente dos números
+        console.log(numeros);
+        console.log(` O maior número desse array é de ${Math.max(...numeros)}`);
+        console.log(`O menor número dessa array é o ${Math.min(...numeros)}`)
+
+        const maior20 = numeros.filter(filtragem)
+        function filtragem(value, index, array){
+            return value > 20;
+        }
+        console.log(maior20)
+        /*const superlista = lista1.concat(lista2 , lista3); //Como fazer uma concatenação de matrizes?????
+        console.log(superlista);*/
+
+
+        // Metodo POP
+        // Metodo PUSH
+        // Metodo SHIFT
+        // Metodo UNSHIFT
+        // Metodo SLIPCE
+        // Metodo JOIN
+        // Metodo CONCAT
+
+
+    </script>
+</body>
+</html>

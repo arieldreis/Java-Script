@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 8: EXERCÍCIO COM forEach</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXERCÍCIO 8: forEach</h1>
+    <script>
+        const clientes = {usuarios:[
+            {
+                nome: "Ana",
+                idade: 25
+            },
+            {
+                nome:"Bruno",
+                idade: 30
+            },
+            {
+                nome:"Clara",
+                idade: 22
+            }
+        ]};
+        clientes.usuarios.forEach((index) =>{
+            console.log(`Usuário: ${index.nome} | Idade: ${index.idade}`);
+        })
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-let tempo = null;
+/*let tempo = null;
 let senhaCorreta 
 function bomba(){
     if(tempo) return;
@@ -35,3 +35,4 @@ function bomba(){
     resultado.style.color = "white";
     resultado.style.fontWeight = "bolder";
 }
+*/

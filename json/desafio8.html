@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 8: JSON</title>
+    <style>
+        body{
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>DESAFIO 8: JSON</h1>
+    <script>
+        const Lojinha = {produtos:[
+            {
+                objetos: "Notebook",
+                valores: 3500,
+            },
+            {
+                objetos: "SmartPhone",
+                valores : 2500,
+            },
+            {
+                objetos: "Fone de ouvido",
+                valores: 200,
+            }
+        ]};
+        Lojinha.produtos.forEach((objeto) =>{ // Nessa caso só se pode usar 1 parametro 
+            console.log(`Produto: ${objeto.objetos} | Preço: ${objeto.valores}`);
+        });
+    </script>
+</body>
+</html>

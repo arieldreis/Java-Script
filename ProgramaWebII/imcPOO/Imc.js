@@ -16,13 +16,20 @@ class Imc{
     classificar(){
         this.calcular();
         console.log(this.calculo)
-        if(this.calculo<18.5){
-             this.classificacao='Abaixo do peso ideal.';
-        }else if(this.calculo<24.9){
-            this.classificacao='Peso ideal.'
-        }else if(this.calculo<29.9){
-            this.classificacao='Obesidade';
-        }else{this.classificacao='Obesidade Mórbida';}}
+        if(this.calculo < 18.5){
+            this.classificacao  = 'Abaixo do peso ideal.';
+        }else if(this.calculo < 24.9){
+            this.classificacao ='Peso ideal.'
+        }else if(this.calculo < 29.9){
+            this.classificacao = 'Sobre-Peso';
+        }else if(this.calculo < 34.9){
+            this.classificacao = 'Obesidade Grau I'
+        }else if(this.calculo < 39.9){
+            this.classificacao = 'Obesidade Severa Grau II'
+        }else{
+            this.classificacao='Obesidade Mórbida';
+        }
+    }
     set altura(valor){
         this._altura = numerico(valor);
     }

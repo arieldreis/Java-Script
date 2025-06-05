@@ -14,10 +14,11 @@ class Pessoa{
         this._peso = numerico(valor);
     }
     set exame(obj){
-        if(typeof(obj)=='object'){
-        this._exame = obj;}else{
+        if(typeof(obj) == 'object'){
+            this._exame = obj;
+        }else{
             console.error('O atributo exame da classe Pessoa deve ter um objeto como valor');
-        this._exame = null;
+            this._exame = null;
         }
     }
     get nome(){

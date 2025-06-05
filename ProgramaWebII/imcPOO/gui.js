@@ -3,7 +3,7 @@ var n = 0;
 var confirma = false;
 var msg = '<h1>IMC</h1>';
 do{
-pessoa[n]=new Pessoa();
+pessoa[n] = new Pessoa();
 pessoa[n].nome = window.prompt('Digite o nome do paciente');
 do{
 pessoa[n].altura = window.prompt('Digite a altura do paciente em metros.');

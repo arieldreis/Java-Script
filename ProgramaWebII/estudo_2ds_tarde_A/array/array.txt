@@ -1,0 +1,58 @@
+<!--
+    NOMES: Ariel dos Reis Marinho, Carlos Henrique, Gabriel Alves Ide Kayo
+    Serie: 2DS - (TARDE) turma: A
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Arrays</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESTUDANDO ARRAYS</h1>
+    <script>
+            let herois = new Array("Batman", "Flash", "Homem-Aranha", "Homem de Ferro", "Hulk", "Mulher Maravilha", "Pantera Negra", "Superman");
+            console.log(herois); // Aqui mostrará todos os elementos que compõem a array
+            document.write(herois[1]+"<br>"); // Aqui mostrará o elemento que está na posição 1 que no caso seria o flash.
+            document.write(herois.length+"<br>"); // Aqui estará o tamanho da lista lista, em outras palavras quantos elementos ela possui
+            herois[8]="Wolverine"; // Essa linha irá adicionar o nome Wolverine na posiçã 8 da array
+            console.log(herois); 
+            herois.push("Viuva Negra"); // Aqui irá adicionar um elemento no final da array
+            console.log(herois);
+            document.write("Índice do Hulk: " + herois.indexOf('Hulk')+"<br>"); // Essa linha irá mostrar a posição da palavra hulk.
+            herois[4]="Lanterna Verde";
+            console.log(herois);
+            herois.pop(); // Essa linha irá retirar o ultimo da array que no caso seria o Viuva Negra.
+            console.log(herois);
+            herois.shift(); // Essa linha remove o primeiro elemento de uma array
+            console.log(herois);
+            herois.unshift("Blade"); // O comando unshift ele adiciona um elemento na primeira posição da array.
+            console.log(herois);
+            document.write("Cópia do pedaço do array do índice 3 até o 5: " + herois.slice(3,6)+"<br>"); // Essa linha ele irá fatiar a array onde ela vai percorrer da posição 3 até a 6.
+            document.write("Recorta 3 itens do array a partir do indice 3 : "+ herois.splice(3,3)+"<br>"); // Essa linha recorta os primeiros três elementos de uma array.
+            console.log(herois);
+            var carros = ["Mustang","Ford Cobra","Camaro","Corvette", "Dogge Charger"];
+            carros.sort(); // Coloca a lista em ordem alfabética.
+            console.log(carros);
+            carros.reverse(); // Essa linha de código reverte a ordem dos elementos de uma array, ou seja de trás para frente
+            console.log(carros);
+            document.write(carros.join(' | ')); // Esse metodo retorna como string e também irá fatiar ela, pois a cada elemento ele irá colocar o | ex: mustang | ford cobra | camaro | corvette | dogge charge.
+            var herois_carros = herois.concat(carros); // Ele irá juntar as duas arrays em uma só.
+            console.log(herois_carros);
+            document.write("<ul>");
+            for(let i=0;i<herois_carros.length;i++){
+            document.write("<li>"+herois_carros[i]+"</li>");
+            }
+            document.write("</ul>"); // Essa linha irá mostra todos os elementos que a array possui.
+    </script>
+</body>
+</html>

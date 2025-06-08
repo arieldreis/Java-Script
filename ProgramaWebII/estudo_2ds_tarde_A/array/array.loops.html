@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANDAS DE ROCK</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button{
+            background-color: red;
+            border-radius: 5px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 1s;
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(219, 22, 22);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APERTE O BOTÃO</h1>
+    </header>
+    <button onclick="BANDAS()">CLIQUE!</button>
+    <p id="resultado"></p>
+    <script>
+        function BANDAS(){
+            let banda = [];
+            let n = 0;
+            let continua = "";
+            let confirma
+            let resultado = document.getElementById('resultado');
+            while(continua != null){
+                continua = window.prompt("Escreva o nome de uma banda de Rock:");
+                if(continua != null && continua != ""){
+                    banda[n] = continua;
+                    console.log(banda[n]);
+                    n+=1;
+                }
+            }
+            console.log(banda);
+            if(banda.length > 0){
+                confirma = window.confirm("Deseja listar as bandas?");
+                if(confirma){
+                    resultado.innerHTML = `<h1>Lista de Bandas:</h1><ol>`
+                        for(let i = 0; i < banda.length; i++){
+                            resultado.innerHTML = `<li>${banda[i]}</li>`
+                        }
+                        resultado.innerHTML = `</ol>`
+                } else{
+                    resultado.innerHTML = "Listagem de bandas cancelada."
+                }
+            } else{
+                resultado.innerHTML = "<h1>Nenhuma banda cadastrada.</h1>"
+            }
+        }
+    </script>
+</body>
+</html>

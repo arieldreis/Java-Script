@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPETIÇÃO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sigmar&display=swap');
+        body{
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+        }
+        main{
+            background-color: white;
+            color: black;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        button{
+            border: none;
+            margin-top: 30px;
+            background: red;
+            color: white;
+            border-radius: 5px;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+            transition: 2s;
+            font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+        }
+        button:hover{
+            background-color: rgb(231, 61, 61);
+            transform: scale(1.1);
+        }
+        input[type="text"], input[type="number"]{
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            margin-bottom: 20px;
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+        }
+        section{
+            margin-top: 40px;
+            padding: 30px;
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DIGITE UMA MENSAGEM NOS CAMPOS ABAIXO</h1>
+    </header>
+    <main>
+        <form>
+            <label for="">DIGITE UMA FRASE: </label><br>
+            <input type="text" name="txt" id="txt" placeholder="DIGITE..." required><br>
+            <label for="">QUANTAS VESEZ VOCÊ QUER QUE REPITIR: </label><br>
+            <input type="number" name="numrepeticao" id="numrepeticao" placeholder="DIGITE..." step="1" min="1" required><br>
+            <button onclick="mensagem()">ENVIAR</button>
+        </form>
+    </main>
+    <section>
+        <h2>O RESULTADO IRÁ APARECER AQUI EMBAIXO!</h2>
+        <div id="demo"></div>
+    </section>
+    <script>
+        function mensagem(){
+            const input1 = document.getElementById('txt');
+            const input2 = document.getElementById('numrepeticao');
+            const resultado = document.getElementById('demo');
+            let mensagem = input1.value;
+            let repeticao = Number(input2.value);
+            if(isNaN(repeticao)){
+                window.alert("O NÚMERO QUE VOCÊ ESTÁ SOLICITANDO NÃO ESTÁ CORRESPONDENDO AO PROGRAMA.");
+            } else {
+                resultado.innerHTML = "";
+                for(let contador = 1; contador <= repeticao; contador++){
+                    resultado.innerHTML += `<p>${mensagem}<br></p>`
+                }
+            }
+            input1.focus();
+            input2.focus();
+            input1.value = "";
+            input2.value = "";
+        }
+    </script>
+</body>
+</html>

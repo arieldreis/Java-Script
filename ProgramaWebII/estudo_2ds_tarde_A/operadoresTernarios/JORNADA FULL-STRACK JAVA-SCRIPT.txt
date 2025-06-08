@@ -1,0 +1,6 @@
+JORNADA FULL-STRACK JAVA-SCRIPT
+
+npm = nation package manager 
+O QUE SERIA COMPONENTES ?
+	São partes da sua pagina web, acessórios, conjuntos de elementos que funcionam sozinhos.
+Arrow function

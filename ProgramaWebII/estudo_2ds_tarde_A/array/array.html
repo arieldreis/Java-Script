@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Arrays</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESTUDANDO ARRAYS</h1>
+    <script>
+        let linguagem = ["HTML","CSS","JAVASCRIPT"];
+        console.log(linguagem);
+        console.log(`O segundo item de linguagem é ${linguagem[1]}`);
+        linguagem.push("Python");
+        console.log(linguagem);
+        console.log();
+        linguagem.forEach((item, index) =>{
+            console.log(`O ELEMENTO ${item} ESTÁ NA POSIÇÃO ${index}`)
+        });
+    </script>
+</body>
+</html>

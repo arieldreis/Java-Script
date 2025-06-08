@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Boldonse&family=Jersey+15&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&family=Playwrite+VN:wght@100..400&family=Yellowtail&display=swap');
+:root{
+    --cor1: black;
+    --cor2: white;
+    --cor3: red;
+    --fonte: "Oswald", Arial, Helvetica, sans-serif;
+    --transição: rgb(245, 87, 87);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--cor1);
+    color: var(--cor2);
+    font-family: var(--fonte);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+h1{
+    margin-bottom: 10px;
+}
+small{
+    margin-bottom: 20px;
+}
+button{
+    background-color: var(--cor3);
+    color: var(--cor2);
+    font-family: var(--fonte);
+    padding: 20px;
+    border: none;
+    border-radius: 5px 0px 5px 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+button:hover{
+    background-color: var(--transição);
+    transform: scale(1.1);
+}
+p{
+    margin-top: 20px;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+}

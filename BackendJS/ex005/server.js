@@ -8,6 +8,12 @@ app.get('/', (req, resp) => {
     resp.send(times);
 });
 
+app.get('/:sigla', (req, resp) => {
+    const siglaInformada = req.params.sigla.toUpperCase();
+    const time = times.find(infoTime => infoTime.sigla === siglaInformada);
+    resp.send(time);
+});
+
 app.listen(PORT, () => {
     console.log(`O servidor está rodando na porta ${PORT} digite o link no seu navegador http://localhost:3012`);
 });

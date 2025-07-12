@@ -10,7 +10,7 @@ const recebimento = document.querySelector('.message_received');
 const mensagens = document.getElementById('message_input');
 
 // Connection opened
-const ws = new WebSocket('ws://localhost:3010');
+const ws = new WebSocket('wss://12feb33f871e.ngrok-free.app');
 ws.onopen = () => {
     console.log("Connect to server.");
 }

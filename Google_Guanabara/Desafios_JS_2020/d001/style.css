@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+button {
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  padding: 30px;
+  cursor: pointer; /* Muda o cursor para o estilo de "mão" indicando um link ou botão clicável */
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgba(255, 0, 0, 0.603);
+  opacity: 0.6;
+}

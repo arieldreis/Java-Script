@@ -1,43 +1,37 @@
-# 🌐 Projeto JavaScript Fullstack  
 
-Este repositório contém um projeto completo em **JavaScript**, com **front-end** interativo e **back-end** em **Node.js**, incluindo APIs e manipulação de dados.  
+# 🌐 Projeto JavaScript  
+
+Este repositório contém exercícios e práticas em **JavaScript (front-end)**, explorando desde conceitos básicos até recursos mais avançados.  
 
 ---
 
-## 📌 Funcionalidades
-### Front-end
-- ✅ Interfaces responsivas com **HTML, CSS e JS puro**  
-- ✅ Formulários de login e cadastro  
-- ✅ Exibição dinâmica de dados do back-end  
-
-### Back-end (Node.js)
-- ✅ Servidor REST com **Express.js**  
-- ✅ Rotas para CRUD de dados  
-- ✅ Conexão com banco de dados (MySQL / MongoDB)  
-- ✅ Autenticação básica de usuários  
-- ✅ Retorno de respostas em JSON  
+## 📌 Conteúdos
+- ✅ Manipulação do **DOM**  
+- ✅ Estruturas condicionais (**if/else**)  
+- ✅ Laços de repetição (**for, while**)  
+- ✅ Uso de **arrays**  
+- ✅ Princípios de **POO** em JS  
+- ✅ Manipulação de **eventos**  
+- ✅ Consumo de **Web APIs**  
 
 ---
 
 ## 🛠 Tecnologias
-- **Front-end:** HTML, CSS, JavaScript  
-- **Back-end:** Node.js, Express.js  
-- **Banco de dados:** MySQL ou MongoDB  
+- **Linguagem:** JavaScript  
+- **Front-end:** HTML, CSS, JS  
 - **IDE:** VS Code  
 
 ---
 
 ## 🚀 Como executar
-### Back-end
 ```bash
 # Clone o repositório
-git clone https://github.com/arieldreis/Java-Script.git
+git clone "https://github.com/arieldreis/Java-Script.git"
 
-# Entre na pasta do back-end
+# Entre na pasta do projeto
 cd Java-Script
 
-# Instale as dependências
-npm install
+# Abra o arquivo que você deseja no navegador
 
-# Rode o servidor
-npm start
+
+

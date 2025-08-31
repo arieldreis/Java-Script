@@ -9,17 +9,35 @@
 <body>
     <div class="container">
         <div class="bomb">💣</div>
-        <div class="timer">180</div>
+        <div class="timer" id="time">180</div>
         <form>
-            <div class="input-container">
-                <input type="number" id="password" step="1" required max="9" min="0">
-                <input type="number" id="password" step="1" required max="9" min="0">
-                <input type="number" id="password" step="1" required max="9" min="0">
-                <input type="number" id="password" step="1" required max="9" min="0">
-                <input type="number" id="password" step="1" required max="9" min="0">
-                <input type="number" id="password" step="1" required max="9" min="0">
+            <div class="containerAlinhamento">
+                <div class="containerPassword">
+                    <input type="number" id="input1" step="1" required max="9" min="0">
+                    <span id="emojiAnswerOne"></span>
+                </div>
+                <div class="containerPassword">
+                    <input type="number" id="input2" step="1" required max="9" min="0">
+                    <span id="emojiAnswerTwo"></span>
+                </div>
+                <div class="containerPassword">
+                    <input type="number" id="input3" step="1" required max="9" min="0">
+                    <span id="emojiAnswerThree"></span>
+                </div>
+                <div class="containerPassword">
+                    <input type="number" id="input4" step="1" required max="9" min="0">
+                    <span id="emojiAnswerFour"></span>
+                </div>
+                <div class="containerPassword">
+                    <input type="number" id="input5" step="1" required max="9" min="0">
+                    <span id="emojiAnswerFive"></span>
+                </div>
+                <div class="containerPassword">
+                    <input type="number" id="input6" step="1" required max="9" min="0">
+                    <span id="emojiAnswerSix"></span>
+                </div>
             </div>
-            <button class="btn" onclick="bomba()" type="button">Desarmar Bomba</button>
+            <button class="btn" type="button" onclick="bomb()">Desarmar Bomba</button>
         </form>
     </div>
     <div id="resultado"></div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON EM JAVA-SCRIPT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JSON EM JAVA-SCRIPT</h1>
+    <pre id="area"></pre>
+    <form>
+        <label for="preencha">PREENCHA O CAMPO ABAIXO: </label><br>
+        <input type="text" placeholder="DIGITE O SEU CEP (apenas números)" id="cep" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')"><br>
+        <button onclick="buscarCep(event)">ENVIAR</button>
+        <div id="texto"></div>
+    </form>
+    <script src="cep.js"></script>
+</body>
+</html>

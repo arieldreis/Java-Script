@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localizador de Países</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Localizador de Países</h1>
+        <input type="text" id="currencyInput" placeholder="Digite o código da moeda (ex: USD)" />
+        <button id="searchButton" onclick="moeda(event)">Buscar Países</button>
+        <div class="results" id="resultsContainer">
+        <!-- Os resultados aparecerão aqui -->
+        </div>
+        <p class="error" id="errorMessage"></p>
+    </div>
+    <script src="currency.js"></script>
+</body>
+</html>

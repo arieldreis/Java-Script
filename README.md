@@ -32,6 +32,3 @@ git clone "https://github.com/arieldreis/Java-Script.git"
 cd Java-Script
 
 # Abra o arquivo que você deseja no navegador
-
-
-
